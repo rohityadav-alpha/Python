@@ -26,5 +26,5 @@ Mistakes:
 
 Important:
 - dont need to write the data types of variables
-- in f-string put values in curlybracket {} 
+- in f-string put values & variables in curlybracket {} 
   eg: print(f"name:{variable of name}")

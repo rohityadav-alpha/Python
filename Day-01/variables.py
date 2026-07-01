@@ -11,3 +11,6 @@ _1name="charlie"
 _name="rohit"
 print(_name)
 print(_1name)
+
+print(f"hello! , {35}")
+print(f"hello! , {'ravi rathod'}")
