@@ -19,9 +19,12 @@ Kya Seekha:
    - print(f"Name: {name}")  (f-string)
 
 Mistakes:
-- String me double quotes use karna zaroori
-- Variable name me space nahi dal sakte
+- it is necessary to use double cout for string
+- dont put spaces in variables 
+- we cannot start a variable name with a number or special character except underscore(_)
+   eg : 1name="alice" and 1_name="diana"
 
 Important:
-- Python me variable declare karne pe type nahi likhna
-- f-string me {} ke andar variable dalo
+- dont need to write the data types of variables
+- in f-string put values in curlybracket {} 
+  eg: print(f"name:{variable of name}")
