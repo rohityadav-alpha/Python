@@ -1,0 +1,27 @@
+# day-01/notes.txt
+Date: July 1, 2026
+Topic: Variables aur Data Types
+
+Kya Seekha:
+1. Variables:
+   - name = "Rohit"  (string)
+   - age = 24        (integer)
+   - height = 5.9    (float)
+
+2. Data Types:
+   - int: 1, 2, 3
+   - float: 1.5, 2.9
+   - string: "hello"
+   - bool: True, False
+
+3. print() function:
+   - print("Hello")
+   - print(f"Name: {name}")  (f-string)
+
+Mistakes:
+- String me double quotes use karna zaroori
+- Variable name me space nahi dal sakte
+
+Important:
+- Python me variable declare karne pe type nahi likhna
+- f-string me {} ke andar variable dalo
