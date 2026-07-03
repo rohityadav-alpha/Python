@@ -1,0 +1,33 @@
+# day-02/notes.txt
+Date: July 2, 2026
+Topic: Variables aur Data Types
+
+what learn:
+1. string:
+   - single line string with cout "hello" and 'hello'
+   - multiline string with cout '''hello multiline statement''' and """hello multiline statement"""
+   - is the string values contain ' cout in it than we use "" cout to write string eg: "i'am rohit"
+   - is the string values contain " cout in it than we use '' cout to write string eg: "i'am rohit"
+
+2. string slicing:
+   - print(str_var[5:3]) #str_var[start:end]
+   - print(str_var[-5:-1]) #str_var[start:end]
+ 
+3. string slicing with skip values:
+   - print(str_var[2:5:2])  #str_var[start:end:skip] if the skip no. 2 then it skips every 2nd alphabet
+   
+4.string functions:
+  - print(len(str_var))
+  - print(str_var.endswith(""))
+  - print(str_var.find(""))
+  - print(str_var.count(""))
+  - print(str_var.capitalize(""))
+  - print(str_var.replace(""))
+  
+
+Mistakes:
+- skiped value cannot be 0 
+- ends value cannot me 0 
+
+Important:
+- there is a multipl types of string functions

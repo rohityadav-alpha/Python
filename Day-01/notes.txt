@@ -2,7 +2,7 @@
 Date: July 1, 2026
 Topic: Variables aur Data Types
 
-Kya Seekha:
+what learn:
 1. Variables:
    - name = "Rohit"  (string)
    - age = 24        (integer)
