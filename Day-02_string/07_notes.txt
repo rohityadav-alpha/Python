@@ -1,6 +1,6 @@
 # day-02/notes.txt
 Date: July 2, 2026
-Topic: Variables aur Data Types
+Topic: String
 
 what learn:
 1. string:

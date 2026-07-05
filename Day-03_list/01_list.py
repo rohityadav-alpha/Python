@@ -1,4 +1,5 @@
 #list <--- is a containter use to store values of different data types
+#list is a ordered collection of items which is mutable and allows duplicate members
 print("list")
 list1=[1,7,3,"rohit",9.2,True]
 print(list1)  #it returns entire values from list

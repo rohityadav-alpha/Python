@@ -1,0 +1,44 @@
+# day-03/notes.txt
+Date: July 3, 2026
+Topic: List & tuples
+
+what learn:
+1. list:
+   - List is a container use to store values of different datatypes
+   - List is a ordered collection of items which is mutable and allows duplicate members
+   - list1=[3,5,6,5,1]
+     print(list1)
+
+2. List slicing:
+   - print(list1[5:3]) #list_var[start:end]
+   - print(list1[-5:-1]) #list_var[start:end]
+ 
+3. List slicing with skip values:
+   - print(list1[2:5:2])  #list_var[start:end:skip] if the skip no. 2 then it skips every 2nd alphabet
+   
+4.list methods:
+  - print(len(list_var))
+  - print(list_var.sort())--.sort arrange value in accending order from list
+  - print(list_var.append())--.append adds value at the end of the list
+  - print(list_var.reverse())--.reverse the vlues of the list
+  - print(list_var.count())--.count use to count the no. of elements in the list
+  - print(list_var.pop())--.pop remove the value using index position 2 from list
+  - print(list_var.remove())--.remove the value 10 from list
+  - print(list_var.clear())--.clear the values from the list
+
+5.Tuple & its methods :
+  - Tuple is a collection which is ordered and unchangeable. Allows duplicate members.
+  - Tuples are used to store multiple items in a single variable.
+  - The tuple() constructor can be used to create a tuple.
+  - t=()--empty tuple
+  - t=(2,5,4,6,5)
+  - methods print(t.count(5)) #output:2 -number 5 appears twice
+            print(t.index(4)) #output:2 -number 4 is at the position 2 
+
+Mistakes:
+- skiped value cannot be 0 
+- ends value cannot me 0 
+
+Important:
+- there is a multipl types of list functions & methods
+- there is a 2 type of tuple methods
