@@ -1,33 +1,58 @@
-# day-02/notes.txt
+# day-04/notes.txt
 Date: July 4, 2026
-Topic: Variables aur Data Types
+Topic: Dictionary & set
 
 what learn:
-1. string:
-   - single line string with cout "hello" and 'hello'
-   - multiline string with cout '''hello multiline statement''' and """hello multiline statement"""
-   - is the string values contain ' cout in it than we use "" cout to write string eg: "i'am rohit"
-   - is the string values contain " cout in it than we use '' cout to write string eg: "i'am rohit"
+1. Dictionary:
+   syntax: 
+     dict1={
+        "name":"rohit",
+        "age" : 23,
+        "cource":"Python"
+        "address":{           -- sub dictionary (Dictionary in side of Dictionary)
+           "city":"thane",
+           "state":"Maharastra",
+           "pin_code":"400604"
+        }
+     }
 
-2. string slicing:
-   - print(str_var[5:3]) #str_var[start:end]
-   - print(str_var[-5:-1]) #str_var[start:end]
- 
-3. string slicing with skip values:
-   - print(str_var[2:5:2])  #str_var[start:end:skip] if the skip no. 2 then it skips every 2nd alphabet
-   
-4.string functions:
-  - print(len(str_var))
-  - print(str_var.endswith(""))
-  - print(str_var.find(""))
-  - print(str_var.count(""))
-  - print(str_var.capitalize(""))
-  - print(str_var.replace(""))
+2. Dictionary methods:
+   - print(dict1["name"])    #returns error if the key is not present in dictionary--interview que
+   - print(dict1.get("name"))#returns none if the key is not present in dictionary--interview que
+   - print(dict1.keys())      #it returns all keys from the dictionary
+   - print(dict1.values())    #it returns all the value of the keys from dictionary
+   - print(dict1.items())    #it returns dictionary like a tuple form
+
+
+3. set and Empty set:
+   syntax: 
+     a={5,6,3,4,2,1}  
+     
+   - a={}  --this is not an empty set this is a empty dictionary
+   - b=set()   --this is a empty set
+
+4.set methods: a is a set
+  - a.add((5,6))   #tuples are immutable, so they can be added to a set
+  - a.add(3)       
+  - b.remove(3)
+  - c.pop()
+  - d.clear() #it return empty set : set()
+  - e = a.union(b)  union set --it returns all elements from both sets 
+  - f = a.intersection(b) intersection set --it return similar value from both set
   
-
 Mistakes:
-- skiped value cannot be 0 
-- ends value cannot me 0 
+  - a.add({})      --this return error , cannot add dictionary in set ,dict is mutable
+  - a.add([2,3,4,9])--this return error , cannot add list in set ,list is mutable
+  - a.add(3,4,7)   --it return error , you can add 1 element at a time
+  - b.remove()    --it return error , you have to put one element to remove
+  - b.remove(3,4) --it return error , you can remove one element at a time
+  - c.pop(7)      --it return error , dont need to define element to remove mostly from end of the set of the last one add 
 
 Important:
-- there is a multipl types of string functions
+  Dictionary
+  - it is unordered
+  - it is mutable
+  - it is indexed
+  - it cannot contain dublicate key
+  set
+  - set is a collection of non repetative elements 

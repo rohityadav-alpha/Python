@@ -8,7 +8,7 @@ a.add(4)
 a.add(7)
 a.add((5,6))   #tuples are immutable, so they can be added to a set
 #a.add({})      --this return error , cannot add dictionary in set ,dict is mutable
-#a.add([2,3,4,9]--this return error , cannot add list in set ,list is mutable
+#a.add([2,3,4,9])--this return error , cannot add list in set ,list is mutable
 #a.add(3,4,7)   --it return error , you can add 1 element at a time
 #a.add(3)       --it return error , 3 is present in set because set is a collection of  non repetative element
 print(type(a))
