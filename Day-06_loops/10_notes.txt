@@ -1,0 +1,105 @@
+# day-06/notes.txt
+Date: July 8, 2026
+Topic: Loops
+
+what learn:
+1. Loops:
+   - Repeat a block of code multiple times.
+   - Two main types: for loop, while loop.
+
+2. for loop:
+   - Syntax: for variable in range(start, end):
+   - Example: 
+       for i in range(1,6):
+           print(i)
+   - Meaning: runs from 1 to 5.
+
+3. while loop:
+   - Syntax: while condition:
+   - Example:
+       i = 1
+       while i <= 5:
+           print(i)
+           i += 1
+   - Meaning: runs until condition becomes false.
+
+4. Common Logics with Loops (Detailed):
+
+- Reverse a number:
+   * Meaning: Flip the digits of a number.
+   * Logic: Take last digit using digit= num%10, add it into reversed(rev=0) number, shrink original using num=num//10, repeat until 0.
+   * Formula: rev = rev*10 + digit
+
+- Prime factors:
+   * Meaning: Break number into prime divisors.
+   * Logic: Start with 2, divide repeatedly while divisible, then move to next divisor. End with leftover prime.
+   * Formula: n = p1 × p2 × … × pk
+
+- Factorial:
+   * Meaning: Product of all numbers from 1 to n.
+   * Logic: Loop from 1 to n, multiply continuously.
+   * Formula: n! = 1 × 2 × 3 × … × n
+
+- Fibonacci:
+   * Meaning: Sequence where each term = sum of previous two.
+   * Logic: Start with 0,1 then loop → next = prev1 + prev2.
+   * Formula: F(n) = F(n-1) + F(n-2), F(0)=0, F(1)=1
+
+- Perfect Number:
+   * Meaning: A number equal to the sum of its proper divisors.
+   * Logic: Loop from 1 to num-1, add divisors (if num%i==0). Compare sum with num.
+   * Formula: Perfect if sum(divisors) == num
+   * Example: 28 → divisors 1+2+4+7+14 = 28 → Perfect
+
+- Armstrong Number:
+   * Meaning: A number equal to the sum of cubes (or power of digits) of its digits.
+   * Logic: Extract each digit, raise to power of total digits, add to sum, compare with original.
+   * Formula: Armstrong if sum(d^n) == num, where n = number of digits
+   * Example: 153 → 1³+5³+3³ = 153 → Armstrong
+
+- Even/Odd separation:
+   * Meaning: Split list into even and odd numbers.
+   * Logic: Loop through list, check n%2 → if 0 then even else odd.
+   * Formula: Even if n%2==0, Odd if n%2!=0
+
+- GCD (HCF):
+   * Meaning: Greatest number dividing both.
+   * Logic: Loop till min(a,b), check common divisors, pick largest.
+   * Formula: GCD(a,b) × LCM(a,b) = a × b
+
+- LCM:
+   * Meaning: Smallest number divisible by both.
+   * Logic: First find GCD, then use formula.
+   * Formula: LCM(a,b) = (a × b) ÷ GCD(a,b)
+
+- Swap without third variable:
+   * Meaning: Exchange values of two variables without extra storage.
+   * Logic: Use arithmetic trick:
+       a = a + b
+       b = a - b
+       a = a - b
+   * Formula: After steps → values swapped.
+
+- Leap year check:
+   * Meaning: Year with 366 days (Feb = 29).
+   * Logic: 
+       If divisible by 400 → leap
+       Else if divisible by 100 → not leap
+       Else if divisible by 4 → leap
+       Else → not leap
+   * Formula: (year%400==0) or (year%4==0 and year%100!=0)
+
+Mistakes:
+- Forgetting to update loop variable → infinite loop.
+- Wrong range end → off‑by‑one error.
+- Using `=` instead of `==` in condition.
+
+Important:
+- for loop → use when range/count is known.
+- while loop → use when condition is checked until false.
+- Always ensure loop variable changes, else infinite loop.
+- Formula links:
+   - Factorial: n! = 1×2×…×n
+   - Fibonacci: F(n) = F(n-1)+F(n-2)
+   - LCM×GCD = a×b
+   - Leap year: (year%400==0) or (year%4==0 and year%100!=0)

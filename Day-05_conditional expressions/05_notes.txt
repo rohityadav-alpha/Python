@@ -1,0 +1,58 @@
+# day-05/notes.txt
+Date: July 5, 2026
+Topic: Conditional expression
+
+what learn:
+1. Greatest of Four Numbers:
+   - Meaning: Find the largest among 4 inputs.
+   - Logic: Compare each number step by step using if-elif.
+   - Formula: max(n1, n2, n3, n4)
+
+2. Student Pass/Fail:
+   - Meaning: Check if student passes with ≥40% overall and ≥33% in each subject.
+   - Logic: 
+       * Condition 1: Each subject ≥33
+       * Condition 2: Overall percentage ≥40
+   - Formula: Percentage = ((s+m+e)/300) × 100
+
+3. Spam Comment Detection:
+   - Meaning: Detect if text contains spam keywords.
+   - Logic: Check if any keyword ("make a lot of money","buy now","subscribe this","click this") is present in input.
+   - Formula: if keyword in text → spam
+
+4. Username Length Check:
+   - Meaning: Verify if username length < 10.
+   - Logic: Use len(username) and compare with 10.
+   - Formula: len(username) <= 10 → short username
+
+5. Name Present in List:
+   - Meaning: Check if entered name exists in predefined list.
+   - Logic: Use membership operator `in`.
+   - Formula: if name in list → present
+
+6. Grade Calculation:
+   - Meaning: Assign grade based on marks.
+   - Logic: 
+       * Marks >90 → Ex
+       * Marks >80 → A
+       * Marks >70 → B
+       * Marks >60 → C
+       * Marks >50 → D
+       * Else → F
+   - Formula: Range-based conditions
+
+7. Post Talking About "Rohit":
+   - Meaning: Detect if post mentions "Rohit" in any case variation.
+   - Logic: Convert post to lowercase and check 'rohit' in post.lower()
+   - Formula: Case-insensitive substring search
+
+Mistakes:
+- Using `=` instead of `==` for comparison.
+- Forgetting to cover all ranges → missing else case.
+- Not handling invalid inputs (marks >100 or <0).
+
+Important:
+- if-elif-else is used for decision making.
+- Always write conditions clearly to avoid overlap.
+- Use `.lower()` for case-insensitive checks.
+- Membership operator `in` is powerful for lists and strings.

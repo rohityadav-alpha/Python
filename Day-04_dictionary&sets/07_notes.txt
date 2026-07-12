@@ -46,7 +46,7 @@ Mistakes:
   - a.add(3,4,7)   --it return error , you can add 1 element at a time
   - b.remove()    --it return error , you have to put one element to remove
   - b.remove(3,4) --it return error , you can remove one element at a time
-  - c.pop(7)      --it return error , dont need to define element to remove mostly from end of the set of the last one add 
+  - c.pop(7)      --it return error , dont need to define element to remove mostly from end of the set of the last one added
 
 Important:
   Dictionary
