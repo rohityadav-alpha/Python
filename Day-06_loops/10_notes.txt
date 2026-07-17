@@ -4,7 +4,8 @@ Topic: Loops
 
 what learn:
 1. Loops:
-   - Repeat a block of code multiple times.
+   - Repeat a block of code multiple times until the condition is false.
+   - Purpose: Automate repetitive tasks (like printing stars, calculating factorial, traversing lists).
    - Two main types: for loop, while loop.
 
 2. for loop:
