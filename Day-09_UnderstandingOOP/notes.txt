@@ -1,0 +1,77 @@
+# day-10/notes.txt
+Date: July 22, 2026
+Topic: Object Oriented Programming (OOP)
+
+what learn:
+1. basic idea:
+   - OOP = organize code using objects (data + behavior).
+   - class = blueprint; object = instance of class.
+   - constructor = special method to initialize object (in Python: __init__).
+
+2. class and object:
+   - define class:
+       class Student:
+           def __init__(self, name, roll, marks):
+               self.name = name
+               self.roll = roll
+               self.marks = marks
+           def get_percentage(self):
+               return sum(self.marks) / len(self.marks)
+   - create object:
+       s = Student("Rohit", 12, [80,75,90])
+       print(s.get_percentage())
+
+3. self keyword:
+   - self refers to current object.
+   - use self.attribute to store instance data.
+
+4. four pillars:
+   - Encapsulation: keep data and methods together; control access.
+   - Abstraction: hide complex details; show simple interface.
+   - Inheritance: child class reuses parent class code.
+   - Polymorphism: same method name, different behavior (overriding).
+
+5. inheritance example:
+   - class Train:
+         def __init__(self, name, fare):
+             self.name = name
+             self.fare = fare
+         def info(self):
+             return f"{self.name} | Fare: {self.fare}"
+     class ExpressTrain(Train):
+         def __init__(self, name, fare, ac):
+             super().__init__(name, fare)
+             self.ac = ac
+         def info(self):   # overriding
+             return super().info() + f" | AC: {self.ac}"
+
+6. encapsulation and access:
+   - use _protected and __private naming to discourage direct access.
+   - use @property and setter to control read/write.
+
+7. common methods:
+   - __init__ : constructor
+   - __str__ / __repr__ : readable object print
+   - instance methods use self
+   - class methods use @classmethod and cls
+   - static methods use @staticmethod
+
+8. when to use OOP:
+   - when data and behavior belong together (students, bank accounts, vehicles).
+   - good for large programs, reuse, and modeling real-world things.
+
+mistakes:
+- misspelling __init__ (constructor not called).
+- forgetting to use self when assigning attributes.
+- using class attribute instead of instance attribute by mistake.
+- not calling super() in child constructor when needed.
+- deep inheritance chains that make code complex.
+
+important:
+- always test small examples to check constructors and methods.
+- prefer composition (has-a) over deep inheritance when possible.
+- keep methods small and single-purpose.
+- use with open(...) inside classes when working with files.
+- use __str__ for better print output of objects.
+- practice tasks: Student class, Hostelite subclass, BankAccount with private balance, polymorphism demo with shapes.
+

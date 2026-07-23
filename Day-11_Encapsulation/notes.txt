@@ -1,0 +1,60 @@
+# day-11/notes.txt
+Date: July 24, 2026
+Topic: Encapsulation (OOP)
+
+what learn:
+1. definition:
+   - Encapsulation = wrapping data (attributes) and methods (functions) together inside a class.
+   - It hides internal details and controls access to data.
+   - Purpose: security, data protection, controlled access.
+
+2. how it works in Python:
+   - public members → accessible everywhere (default).
+   - protected members → prefix with single underscore `_var` (convention, not strict).
+   - private members → prefix with double underscore `__var` (name mangling, not directly accessible).
+
+3. example:
+   class Student:
+       def __init__(self, name, marks):
+           self.name = name          # public
+           self._marks = marks       # protected
+           self.__grade = "A"        # private
+
+       def get_grade(self):          # controlled access
+           return self.__grade
+
+   s = Student("Rohit", 90)
+   print(s.name)          # works
+   print(s._marks)        # works but discouraged
+   print(s.get_grade())   # works (via method)
+   print(s.__grade)       # error (private)
+
+4. getter and setter methods:
+   - getter → method to read private data.
+   - setter → method to update private data safely.
+   Example:
+       class BankAccount:
+           def __init__(self):
+               self.__balance = 0
+           def get_balance(self):
+               return self.__balance
+           def deposit(self, amount):
+               if amount > 0:
+                   self.__balance += amount
+
+5. advantages:
+   - hides internal implementation.
+   - prevents accidental modification.
+   - provides controlled access.
+   - improves security and maintainability.
+
+mistakes:
+- directly accessing private variables (e.g., obj.__var → error).
+- thinking single underscore `_var` is truly private (it is only convention).
+- forgetting to use getter/setter for private attributes.
+
+important:
+- encapsulation is one of the four pillars of OOP.
+- in Python, privacy is by naming convention, not strict enforcement.
+- use `@property` decorator for elegant getter/setter.
+- exam focus: definition, public/protected/private, example with getter/setter, advantages.

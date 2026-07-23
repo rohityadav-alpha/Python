@@ -1,0 +1,51 @@
+# day-22/notes.txt
+Date: July 24, 2026
+Topic: Composition (Has‑a Relationship)
+
+what learn:
+1. definition:
+   - Composition = one class contains object(s) of another class.
+   - Relationship: "has‑a" (e.g., Car has an Engine).
+   - Purpose: code reuse, modular design, loose coupling.
+
+2. syntax example:
+   class Engine:
+       def start(self):
+           print("Engine started")
+
+   class Car:
+       def __init__(self):
+           self.engine = Engine()   # Car has an Engine
+       def drive(self):
+           self.engine.start()
+           print("Car driving")
+
+   obj = Car()
+   obj.drive()
+
+3. key points:
+   - Composition uses objects of other classes inside a class.
+   - No inheritance hierarchy, just usage.
+   - More flexible than inheritance.
+   - Avoids multiple inheritance problems.
+
+4. advantages:
+   - Loose coupling → easy to change components.
+   - Better modularity → replace parts without affecting whole.
+   - Promotes code reuse without rigid hierarchy.
+   - Preferred when "has‑a" relation fits better than "is‑a".
+
+5. differences from inheritance:
+   - Inheritance → "is‑a" (SportsCar is a Car).
+   - Composition → "has‑a" (Car has an Engine).
+   - Inheritance → tight coupling, supports polymorphism.
+   - Composition → loose coupling, more flexible.
+
+mistakes:
+- using inheritance when relation is actually "has‑a".
+- overcomplicating composition with too many nested objects.
+- forgetting to initialize contained objects in constructor.
+
+important:
+- exam focus: definition, syntax example, advantages, difference with inheritance.
+- rule of thumb: use composition when class needs functionality of another class but is not logically its subtype.

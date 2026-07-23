@@ -1,0 +1,52 @@
+# day-12/notes.txt
+Date: July 26, 2026
+Topic: Abstraction (OOP)
+
+what learn:
+1. definition:
+   - Abstraction = hiding internal implementation details and showing only essential features.
+   - Purpose: reduce complexity, focus on "what" not "how".
+
+2. how it works in Python:
+   - Python supports abstraction using abstract classes and methods.
+   - Abstract class = class that cannot be instantiated directly.
+   - Abstract method = method declared but not implemented in base class.
+
+3. syntax with abc module:
+   from abc import ABC, abstractmethod
+
+   class Shape(ABC):
+       @abstractmethod
+       def area(self):
+           pass
+
+   class Circle(Shape):
+       def __init__(self, radius):
+           self.radius = radius
+       def area(self):
+           return 3.14 * self.radius * self.radius
+
+   c = Circle(5)
+   print(c.area())
+
+4. key points:
+   - abstract class inherits from ABC.
+   - abstract methods must be implemented in child class.
+   - cannot create object of abstract class directly.
+   - helps enforce a contract (child must implement required methods).
+
+5. advantages:
+   - hides unnecessary details.
+   - enforces rules for subclasses.
+   - improves code design and readability.
+   - supports polymorphism.
+
+mistakes:
+- trying to instantiate abstract class directly → error.
+- forgetting to implement abstract methods in child class → error.
+- confusing abstraction with encapsulation (encapsulation = data hiding, abstraction = detail hiding).
+
+important:
+- abstraction is one of the four pillars of OOP.
+- use abc module for abstract classes in Python.
+- exam focus: definition, syntax with abc, example with abstract method, advantages.

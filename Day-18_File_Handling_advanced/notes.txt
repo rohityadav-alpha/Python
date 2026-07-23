@@ -1,0 +1,69 @@
+# day-18/notes.txt
+Date: July 24, 2026
+Topic: File Handling (Advanced)
+
+what learn:
+1. definition:
+   - File handling = working with files (text, binary, CSV, JSON) for reading/writing data.
+   - Advanced file handling includes binary files, CSV, JSON, and context managers.
+
+2. binary files:
+   - open with mode "rb" (read binary), "wb" (write binary).
+   Example:
+       with open("data.bin", "wb") as f:
+           f.write(b"Hello Rohit")
+       with open("data.bin", "rb") as f:
+           print(f.read())   # b'Hello Rohit'
+
+3. CSV files:
+   - use csv module.
+   Example:
+       import csv
+       with open("data.csv", "w", newline="") as f:
+           writer = csv.writer(f)
+           writer.writerow(["Name","Age"])
+           writer.writerow(["Rohit",23])
+
+       with open("data.csv", "r") as f:
+           reader = csv.reader(f)
+           for row in reader:
+               print(row)
+
+4. JSON files:
+   - use json module.
+   Example:
+       import json
+       data = {"name":"Rohit","age":23}
+       with open("data.json","w") as f:
+           json.dump(data,f)
+
+       with open("data.json","r") as f:
+           obj = json.load(f)
+           print(obj)
+
+5. context manager:
+   - use `with open(...)` → automatically closes file.
+   - safer than manual close.
+
+6. file modes recap:
+   - "r" → read text
+   - "w" → write text (overwrite)
+   - "a" → append text
+   - "rb"/"wb"/"ab" → binary modes
+   - "r+" → read + write
+
+advantages:
+- binary files → store non-text data (images, audio).
+- CSV → structured tabular data.
+- JSON → lightweight data exchange format.
+- context manager → automatic cleanup.
+
+mistakes:
+- forgetting to close file (avoid by using with).
+- wrong mode (e.g., using "r" when file doesn’t exist).
+- mixing text and binary modes.
+- not handling exceptions (FileNotFoundError, PermissionError).
+
+important:
+- exam focus: definition, binary/CSV/JSON examples, context manager, file modes.
+- advanced file handling is used in real-world applications (data storage, config files, APIs).

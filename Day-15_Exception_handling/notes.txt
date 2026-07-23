@@ -1,0 +1,74 @@
+# day-15/notes.txt
+Date: July 24, 2026
+Topic: Exception Handling (Python)
+
+what learn:
+1. definition:
+   - Exception = error that occurs during program execution.
+   - Exception handling = process to handle runtime errors gracefully without crashing program.
+   - Purpose: maintain program flow, show meaningful error messages.
+
+2. keywords in Python:
+   - try → block where code may raise error.
+   - except → block that handles error.
+   - finally → block that always executes (cleanup).
+   - else → block that runs if no exception occurs.
+   - raise → manually raise an exception.
+
+3. basic syntax:
+   try:
+       x = 10 / 0
+   except ZeroDivisionError:
+       print("Cannot divide by zero")
+   finally:
+       print("Program ended")
+
+4. multiple except:
+   try:
+       num = int("abc")
+   except ValueError:
+       print("Invalid value")
+   except TypeError:
+       print("Type error")
+
+5. else block:
+   try:
+       x = 5 / 1
+   except ZeroDivisionError:
+       print("Error")
+   else:
+       print("No error, result:", x)
+
+6. raise keyword:
+   def check_age(age):
+       if age < 18:
+           raise ValueError("Age must be 18+")
+       else:
+           print("Valid age")
+
+   check_age(15)  # raises exception
+
+7. custom exception:
+   class MyError(Exception):
+       pass
+
+   try:
+       raise MyError("Custom error occurred")
+   except MyError as e:
+       print(e)
+
+advantages:
+- prevents program crash.
+- provides meaningful error messages.
+- allows cleanup (close files, release resources).
+- improves reliability.
+
+mistakes:
+- writing except without specifying error → catches all, not recommended.
+- forgetting finally block for cleanup.
+- raising exception without message → confusing output.
+- ignoring exceptions silently → debugging becomes hard.
+
+important:
+- exam focus: definition, try-except-finally syntax, raise keyword, custom exception example.
+- exception handling is critical for robust programs.

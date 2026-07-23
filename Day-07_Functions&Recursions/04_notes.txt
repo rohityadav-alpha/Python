@@ -1,0 +1,63 @@
+# day-09/notes.txt
+Date: 18 July 2026
+Topic: Functions and Recursion
+
+1. Functions:
+   * Definition: Block of reusable code, executed when called.
+   * Syntax:
+       def function_name(parameters):
+           # code
+           return value
+   * Advantages:
+       - Code reusability
+       - Modularity
+       - Easy debugging
+   * Example:
+       def add(a,b):
+           return a+b
+       print(add(2,3))  # Output: 5
+
+2. Function Types:
+   - Built-in functions (len(), max(), print())
+   - User-defined functions (created using def)
+   - Recursive functions (function calls itself)
+
+3. Parameters vs Arguments:
+   * Parameters → variables defined in function header.
+   * Arguments → actual values passed during call.
+
+4. Return Statement:
+   * Used to send result back to caller.
+   * If no return → function returns None.
+
+5. Recursion:
+   * Definition: Function calling itself until base condition is met.
+   * Structure:
+       def func(...):
+           if base_condition:
+               return value
+           else:
+               return func(smaller_problem)
+   * Example (Factorial):
+       def fact(n):
+           if n==0 or n==1:
+               return 1
+           else:
+               return n*fact(n-1)
+       print(fact(5))  # Output: 120
+
+6. Key Points in Recursion:
+   - Must have base case (to stop infinite calls).
+   - Problem size reduces each call.
+   - Stack memory used → deep recursion may cause error.
+
+7. Difference: Iteration vs Recursion
+   - Iteration: Uses loops, less memory, faster.
+   - Recursion: Uses function calls, elegant for problems like factorial, Fibonacci, tree traversal.
+
+8. Common Recursive Examples:
+   - Factorial
+   - Fibonacci series
+   - Sum of digits
+   - Reverse string/number
+   - Tower of Hanoi

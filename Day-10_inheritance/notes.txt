@@ -1,0 +1,72 @@
+# day-10/notes.txt
+Date: July 23, 2026
+Topic: Inheritance (OOP)
+
+what learn:
+1. definition:
+   - Inheritance = child class reuses parent class properties and methods.
+   - Purpose: code reuse, hierarchy, easy maintenance.
+
+2. types of inheritance:
+   - Single inheritance → one parent, one child.
+   - Multiple inheritance → child inherits from multiple parents.
+   - Multilevel inheritance → grandparent → parent → child.
+   - Hierarchical inheritance → one parent, many children.
+   - Hybrid inheritance → mix of above.
+
+3. syntax:
+   class Parent:
+       def func1(self):
+           print("Parent method")
+
+   class Child(Parent):
+       def func2(self):
+           print("Child method")
+
+   obj = Child()
+   obj.func1()   # inherited
+   obj.func2()
+
+4. constructor in inheritance:
+   - child can define its own __init__.
+   - use super().__init__() to call parent constructor.
+   Example:
+       class Parent:
+           def __init__(self, name):
+               self.name = name
+       class Child(Parent):
+           def __init__(self, name, age):
+               super().__init__(name)
+               self.age = age
+
+5. method overriding:
+   - child defines same method name → overrides parent.
+   Example:
+       class Parent:
+           def show(self):
+               print("Parent show")
+       class Child(Parent):
+           def show(self):
+               print("Child show")
+
+6. super() keyword:
+   - used to call parent methods/constructors.
+   - ensures proper constructor chaining.
+
+7. advantages:
+   - code reuse.
+   - logical hierarchy.
+   - supports polymorphism.
+   - reduces duplication.
+
+mistakes:
+- forgetting super().__init__() → parent attributes not initialized.
+- argument mismatch between parent and child constructors.
+- misspelling __init__.
+- overusing multiple inheritance → confusion.
+
+important:
+- Python supports multiple inheritance; MRO (Method Resolution Order) decides which parent method runs.
+- composition (has-a) sometimes better than inheritance (is-a).
+- inheritance + overriding + super() are exam-focused points.
+- practice tasks: Student → Hostelite subclass, Train → ExpressTrain subclass, BankAccount with inheritance.

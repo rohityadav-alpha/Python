@@ -1,0 +1,74 @@
+# day-16/notes.txt
+Date: July 24, 2026
+Topic: Iterators & Generators (Python)
+
+what learn:
+1. definition:
+   - Iterator = object that allows sequential access to elements one at a time.
+   - Generator = special type of iterator created using functions with `yield`.
+   - Purpose: memory efficiency, lazy evaluation.
+
+2. iterator basics:
+   - Any object with `__iter__()` and `__next__()` methods is an iterator.
+   - Example:
+       nums = [1,2,3]
+       it = iter(nums)
+       print(next(it))  # 1
+       print(next(it))  # 2
+
+3. custom iterator:
+   class Counter:
+       def __init__(self, limit):
+           self.limit = limit
+           self.start = 0
+       def __iter__(self):
+           return self
+       def __next__(self):
+           if self.start < self.limit:
+               self.start += 1
+               return self.start
+           else:
+               raise StopIteration
+
+   for val in Counter(5):
+       print(val)   # 1,2,3,4,5
+
+4. generator basics:
+   - Generator function uses `yield` instead of `return`.
+   - Each call to `next()` resumes from last yield.
+   Example:
+       def gen_numbers():
+           yield 1
+           yield 2
+           yield 3
+       g = gen_numbers()
+       print(next(g))  # 1
+       print(next(g))  # 2
+
+5. generator with loop:
+   def squares(n):
+       for i in range(n):
+           yield i*i
+   for val in squares(5):
+       print(val)   # 0,1,4,9,16
+
+6. generator expression:
+   - Similar to list comprehension but with parentheses.
+   Example:
+       gen = (x*x for x in range(5))
+       for val in gen:
+           print(val)
+
+advantages:
+- iterators → allow sequential access without loading all data.
+- generators → memory efficient, produce values on demand.
+- useful for large datasets, streams, infinite sequences.
+
+mistakes:
+- forgetting StopIteration in custom iterator → infinite loop.
+- using return instead of yield in generator → stops immediately.
+- trying to reuse generator after exhaustion → gives no output.
+
+important:
+- exam focus: definition, iterator protocol (__iter__, __next__), generator with yield, generator expression, advantages.
+- iterators and generators are backbone of Python loops and memory efficiency.

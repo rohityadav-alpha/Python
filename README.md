@@ -27,3 +27,13 @@ python hello.py
 - scikit-learn
 - PyTorch
 - LangChain
+
+## Remaining
+
+- Functions (def, return, arguments, default args)
+- Lambda functions
+- Map, Filter, Reduce
+- Miscellaneous Advanced
+--Regular Expressions (re module)
+--Itertools, functools
+--Virtual environments & pip basics

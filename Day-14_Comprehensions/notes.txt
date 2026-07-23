@@ -1,0 +1,53 @@
+# day-14/notes.txt
+Date: July 30, 2026
+Topic: Comprehensions (Python)
+
+what learn:
+1. definition:
+   - Comprehension = short way to create new lists, sets, or dictionaries.
+   - Purpose: write clean, compact, and readable code.
+
+2. types of comprehensions:
+   - List comprehension → [expression for item in iterable if condition]
+   - Set comprehension → {expression for item in iterable if condition}
+   - Dict comprehension → {key:value for item in iterable if condition}
+   - Generator expression → (expression for item in iterable if condition)
+
+3. list comprehension example:
+   nums = [1,2,3,4,5]
+   squares = [x*x for x in nums]
+   print(squares)   # [1,4,9,16,25]
+
+4. with condition:
+   even = [x for x in nums if x%2==0]
+   print(even)   # [2,4]
+
+5. set comprehension example:
+   nums = [1,2,2,3,4]
+   unique = {x for x in nums}
+   print(unique)   # {1,2,3,4}
+
+6. dict comprehension example:
+   names = ["rohit","amit","neha"]
+   lengths = {name:len(name) for name in names}
+   print(lengths)   # {'rohit':5,'amit':4,'neha':4}
+
+7. generator expression example:
+   gen = (x*x for x in range(5))
+   for val in gen:
+       print(val)   # 0,1,4,9,16
+
+advantages:
+- shorter and cleaner code.
+- faster than normal loops in many cases.
+- easy to read when used properly.
+
+mistakes:
+- writing too complex expressions → reduces readability.
+- forgetting condition part → may include unwanted values.
+- confusing dict comprehension syntax with list comprehension.
+
+important:
+- exam focus: definition, syntax, examples of list/set/dict comprehension.
+- comprehension is Pythonic way to replace loops for creating collections.
+- keep expressions simple for clarity.

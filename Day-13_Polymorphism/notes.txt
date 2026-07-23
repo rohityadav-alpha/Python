@@ -1,0 +1,66 @@
+# day-13/notes.txt
+Date: July 28, 2026
+Topic: Polymorphism (OOP)
+
+what learn:
+1. definition:
+   - Polymorphism = "many forms".
+   - Same function/method/operator behaves differently depending on the object.
+   - Purpose: flexibility, code reuse, cleaner design.
+
+2. types of polymorphism:
+   - Compile-time (method overloading) → not strictly supported in Python.
+   - Run-time (method overriding) → supported in Python (child class overrides parent method).
+   - Operator overloading → using dunder methods (__add__, __sub__, etc.).
+
+3. method overriding example:
+   class Animal:
+       def sound(self):
+           print("Animal sound")
+   class Dog(Animal):
+       def sound(self):
+           print("Bark")
+   class Cat(Animal):
+       def sound(self):
+           print("Meow")
+
+   for obj in [Dog(), Cat()]:
+       obj.sound()   # different outputs
+
+4. operator overloading example:
+   class Number:
+       def __init__(self, value):
+           self.value = value
+       def __add__(self, other):
+           return self.value + other.value
+
+   n1 = Number(10)
+   n2 = Number(20)
+   print(n1 + n2)   # 30
+
+5. duck typing:
+   - In Python, polymorphism also works by "behavior not type".
+   - If two classes have same method name, they can be used interchangeably.
+   Example:
+       class Pigeon:
+           def fly(self): print("Pigeon flying")
+       class Airplane:
+           def fly(self): print("Airplane flying")
+
+       for obj in [Pigeon(), Airplane()]:
+           obj.fly()
+
+6. advantages:
+   - same interface, multiple implementations.
+   - reduces duplication.
+   - improves flexibility and readability.
+   - supports dynamic behavior.
+
+mistakes:
+- confusing polymorphism with inheritance (inheritance is reuse, polymorphism is different behavior).
+- forgetting to override method in child class.
+- assuming Python supports method overloading like Java/C++ (Python does not).
+
+important:
+- polymorphism is one of the four pillars of OOP.
+- exam focus: definition, method overriding example, operator overloading example, duck typing example, advantages.

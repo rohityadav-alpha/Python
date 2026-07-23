@@ -1,0 +1,72 @@
+# day-20/notes.txt
+Date: July 24, 2026
+Topic: Modules & Packages (Python)
+
+what learn:
+1. definition:
+   - Module = a file containing Python code (functions, classes, variables).
+   - Package = collection of modules organized in directories with __init__.py file.
+   - Purpose: code reuse, organization, maintainability.
+
+2. creating a module:
+   # file: mymodule.py
+   def greet(name):
+       return f"Hello {name}"
+
+   # usage
+   import mymodule
+   print(mymodule.greet("Rohit"))
+
+3. importing modules:
+   - import module_name
+   - import module_name as alias
+   - from module_name import function/class
+   - from module_name import *
+
+   Example:
+       import math
+       print(math.sqrt(16))
+       from math import sqrt
+       print(sqrt(25))
+
+4. built-in modules:
+   - math, random, datetime, os, sys, re, json, csv, etc.
+   Example:
+       import random
+       print(random.randint(1,10))
+
+5. creating a package:
+   - directory with __init__.py file.
+   Example:
+       mypackage/
+           __init__.py
+           module1.py
+           module2.py
+
+       # usage
+       from mypackage import module1
+       module1.func()
+
+6. __name__ == "__main__":
+   - used to check if file is run directly or imported.
+   Example:
+       if __name__ == "__main__":
+           print("Run directly")
+       else:
+           print("Imported")
+
+advantages:
+- organizes code into reusable components.
+- avoids duplication.
+- improves readability and maintainability.
+- allows sharing code across projects.
+
+mistakes:
+- forgetting __init__.py in package (older Python versions need it).
+- circular imports (module A imports B, B imports A).
+- using * import → reduces clarity.
+- not handling module path correctly.
+
+important:
+- exam focus: definition of module & package, syntax of import, example of __name__ == "__main__", advantages.
+- modules/packages are backbone of Python project structure.

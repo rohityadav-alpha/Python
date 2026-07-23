@@ -1,0 +1,64 @@
+Date: 22 July 2026
+Topic: File I/O (Simple Notes)
+
+1. What is File I/O
+   * File I/O = File Input / Output.
+   * Input  = reading data from a file.
+   * Output = writing data to a file.
+   * Use when you want data to persist after program ends.
+
+2. Open a file
+   * Syntax: f = open("filename", "mode")
+   * Always choose correct mode (see Modes).
+
+3. File Modes
+   * "r"   → Read only. File must exist.
+   * "w"   → Write only. Creates file or overwrites existing.
+   * "a"   → Append. Adds data at end; creates file if not exists.
+   * "r+"  → Read and write. File must exist.
+   * "w+"  → Write and read. Creates or overwrites.
+   * "a+"  → Append and read. Creates if not exists.
+   * Note: Modes can include "b" for binary (e.g., "rb", "wb").
+
+4. Read methods
+   * f.read()      → returns whole file as one string.
+   * f.readline()  → returns next line as string.
+   * f.readlines() → returns list of all lines.
+   * Example:
+       with open("data.txt", "r") as f:
+           text = f.read()
+
+5. Write and append
+   * f.write("text") → writes string, returns number of characters written.
+   * f.writelines(list_of_strings) → writes multiple lines (no automatic newlines).
+   * Example write:
+       with open("data.txt", "w") as f:
+           f.write("Hello\n")
+   * Example append:
+       with open("data.txt", "a") as f:
+           f.write("New line\n")
+
+6. Best practice
+   * Use `with open(...) as f:` so file closes automatically.
+   * Always handle exceptions for file operations (FileNotFoundError, IOError).
+   * Convert non-string data to string before writing (use str()).
+   * Use newline `\n` when writing lines.
+
+7. Common patterns
+   * Read file line by line:
+       with open("data.txt", "r") as f:
+           for line in f:
+               print(line.strip())
+   * Read numbers and convert:
+       with open("nums.txt", "r") as f:
+           nums = [int(x) for x in f.read().split()]
+   * Write a dictionary to file (simple text):
+       with open("out.txt", "w") as f:
+           for k,v in mydict.items():
+               f.write(f"{k}:{v}\n")
+
+8. Quick tips and gotchas
+   * f.read() returns empty string if file pointer is at end. Use f.seek(0) to rewind.
+   * "w" mode deletes previous content — be careful.
+   * Use "b" mode for images or binary files.
+   * Always close file or use `with` to avoid resource leaks.

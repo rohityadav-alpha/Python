@@ -1,0 +1,71 @@
+# day-17/notes.txt
+Date: July 24, 2026
+Topic: Decorators (Python)
+
+what learn:
+1. definition:
+   - Decorator = function that takes another function as input and adds extra functionality without changing its original code.
+   - Purpose: code reuse, cleaner syntax, separation of concerns.
+
+2. basic syntax:
+   def decorator_func(func):
+       def wrapper():
+           print("Before function call")
+           func()
+           print("After function call")
+       return wrapper
+
+   @decorator_func
+   def say_hello():
+       print("Hello")
+
+   say_hello()
+   # Output:
+   # Before function call
+   # Hello
+   # After function call
+
+3. function decorator:
+   - `@decorator_name` is shortcut for `func = decorator_name(func)`.
+   - Useful for logging, authentication, timing, etc.
+
+4. decorator with arguments:
+   def repeat(n):
+       def decorator(func):
+           def wrapper(*args, **kwargs):
+               for _ in range(n):
+                   func(*args, **kwargs)
+           return wrapper
+       return decorator
+
+   @repeat(3)
+   def greet(name):
+       print("Hello", name)
+
+   greet("Rohit")  # prints 3 times
+
+5. built-in decorators:
+   - @staticmethod → define static method (no self).
+   - @classmethod → define class method (uses cls).
+   - @property → define getter/setter for attributes.
+
+6. multiple decorators:
+   - You can stack decorators:
+       @decorator1
+       @decorator2
+       def func():
+           pass
+
+advantages:
+- adds functionality without modifying original function.
+- improves readability and reusability.
+- useful for cross-cutting concerns (logging, security, caching).
+
+mistakes:
+- forgetting to return wrapper function → decorator won’t work.
+- not using *args, **kwargs → decorator fails for functions with parameters.
+- overusing decorators → code becomes hard to read.
+
+important:
+- exam focus: definition, syntax with @decorator, example with wrapper, built-in decorators (@staticmethod, @classmethod, @property).
+- decorators are advanced Python feature, often asked in interviews.
