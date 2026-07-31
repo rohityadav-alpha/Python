@@ -5,13 +5,13 @@ hindi_dict={
     "wishram":"rest"
     }
 print("namaste in english translation is",hindi_dict["namaste"],"\n")
-'''print("options are",hindi_dict.keys())
+print("options are",hindi_dict.keys())
 lan=input("enter the language:")
-print(f"the word {lan} in english is {hindi_dict[lan]}\n")'''
+print(f"the word {lan} in english is {hindi_dict[lan]}\n")
 
 
 #Q2.write a program to input eight numbers from the user and display all the unique numbers(once)
-'''n1=int(input("Enter number 1st:"))
+n1=int(input("Enter number 1st:"))
 n2=int(input("Enter number 2nd:"))
 n3=int(input("Enter number 3rd:"))
 n4=int(input("Enter number 4th:"))
@@ -22,7 +22,7 @@ n8=int(input("Enter number 8th:"))
 #if you enter any number twice or more it print only one time 
 set1={n1,n2,n3,n4,n5,n6,n7,n8}
 print(type(set1))
-print(set1)'''
+print(set1)
 
 
 #Q3.can we have a set with 18(int) and 18(str)
@@ -57,14 +57,14 @@ updated_dict={
 dict1.update(updated_dict)
 print(dict1)
 #solution2
-'''frnd={}
+frnd={}
 a=input("enter the fav language of rohit:")
 b=input("enter the fav language of shubham:")
 c=input("enter the fav language of ganya:")
 frnd['rohit']=a
 frnd['shubham']=b
 frnd['ganya']=c
-print(frnd)'''
+print(frnd)
 
 
 #Q7.if name of  2 frinds are same what will happen to the program in problem6?

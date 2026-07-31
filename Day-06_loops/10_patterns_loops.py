@@ -1,4 +1,4 @@
-'''#Q1. write a program to print following pattern using loops
+#Q1. write a program to print following pattern using loops
 # *
 # * * 
 # * * *
@@ -19,6 +19,14 @@ for i in range(num):
    for j in range(num):
         print("*"*(2*i+1),end="")
    print(" "*(num-i-1))
+
+
+def print_p(n):
+    for i in range(n):
+        space=" "*(n-i-1)
+        star="*"*(2*i-1)
+        print(space+star)
+print_p(5)
 
 #Q3.write a program to print following pattern using loops
 # * * * * *
@@ -57,7 +65,9 @@ for i in range(rows):
         else:
             print("  ",end="")
     print()
-'''
+
+
+
 #    *    
 #  *   *    
 # *     *   

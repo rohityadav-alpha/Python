@@ -114,7 +114,7 @@ superfast.bookTicket()
 
 superfast.getSeats()
 '''
-
+'''
 #we can use slf or any other parameter on the place of self in class methodas
 #because self is a parameter
 
@@ -123,3 +123,29 @@ class person:
         slf.name=name
 rohit=person("Rohit")
 print(rohit.name)
+'''
+
+#Write a Python program program for basic banking system -- create account class with 2 attributes balance,accountno. create method for debit , credit & printing the balance
+class Account:
+
+    def __init__(self,name,bal,acc):
+        self.balance=bal
+        self.AccountNo=acc
+        self.name=name
+
+    def debit(self,amt):
+        self.balance-=amt
+        print(f"{self.name} Rs.{amt} is debited from your account no.{self.AccountNo}")
+        print(f"availale balance Rs.{self.getBalance()}")
+        
+    def credit(self,amt):
+        self.balance+=amt
+        print(f"{self.name} Rs.{amt} is credited in your account no.{self.AccountNo}")
+        print(f"availale balance Rs.{self.getBalance()}")
+
+    def getBalance(self):
+        return self.balance
+
+a1=Account("rohit",20000,256175)
+a1.debit(700)
+a1.credit(1300)
