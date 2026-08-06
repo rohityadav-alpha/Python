@@ -3,7 +3,7 @@
 #it short value from list
 print(".sort value from list")
 list1=[1,5,3,7,10,56,5]
-list1.sort()
+list1.sort()   # .sort() function is used to sort the value from list
 print(list1.count(5))
 print(list1,"\n")
 

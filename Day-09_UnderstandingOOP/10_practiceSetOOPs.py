@@ -113,8 +113,7 @@ superfast.bookTicket()
 superfast.bookTicket()
 
 superfast.getSeats()
-'''
-'''
+
 #we can use slf or any other parameter on the place of self in class methodas
 #because self is a parameter
 
@@ -123,7 +122,7 @@ class person:
         slf.name=name
 rohit=person("Rohit")
 print(rohit.name)
-'''
+
 
 #Write a Python program program for basic banking system -- create account class with 2 attributes balance,accountno. create method for debit , credit & printing the balance
 class Account:
@@ -149,3 +148,23 @@ class Account:
 a1=Account("rohit",20000,256175)
 a1.debit(700)
 a1.credit(1300)
+'''
+#1. Count the frequency of each character in a string using a dictionary.
+word=input("Enter the word: ")
+class FreqCount:
+    def __init__(self,w):
+        self.w=w
+    def frequence(self):
+        dictn={}
+        for char in self.w:
+            n=0
+            for ch in self.w:
+                if char==ch:
+                    n+=1
+            dictn[char]=n
+        return dictn
+obj=FreqCount(word)
+print(obj.frequence())
+    
+
+

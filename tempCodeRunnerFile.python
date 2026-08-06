@@ -1,9 +1,0 @@
-#chek where string is palindrom 
-def is_palindrome(s):
-    nom_str = s.replace(" ", "").lower()
-    return nom_str== nom_str[::-1]
-input_str = "A man a plan a canal Panama"
-if  is_palindrome(input_str):
-    print("the string is palindrome")
-else:
-    print("the string is not palindrom")

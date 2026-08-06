@@ -30,7 +30,7 @@ print(letter)
 """
 
 #write a python program
-#find double spalce in string
+#find double space in string
 '''sentence="Rohit yadav is a  BTech student"
 sentence=sentence.find("  ")
 print(sentence)'''
@@ -46,5 +46,7 @@ letter ="dear rohit, you are a good person. thanks!"
 formate_letter= "dear rohit,\n\t you are a good person.\n thanks!"
 print(letter)
 print(formate_letter)
+
+
 
 

@@ -40,3 +40,6 @@ letter6='''
 print(letter6)
 print(f"Datatype of the letters value is {type(letter6)}")
 print(f"length of the letter is : {len(letter6)}")
+
+name="rohitt"
+print(name.count("t"))

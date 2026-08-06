@@ -25,3 +25,5 @@ for key in dict1:
 set1={1,4,6,3,7,"rohit",True,False}
 for i in set1:
     print(i)
+
+
