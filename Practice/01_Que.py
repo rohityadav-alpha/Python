@@ -30,4 +30,6 @@ if even_odd3(n) is True:
 else:
     print(f"the number {n} is odd")
 
-
+w="rohit"
+list1=list(w)
+print(list1)
