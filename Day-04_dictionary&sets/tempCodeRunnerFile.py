@@ -51,5 +51,4 @@ f = a.intersection(b)  #f is a new variable to store intersection elements
 print(f)
 
 #disjoint -- 2 sets are disjoin or not 
-print(a.isdisjoint(b))  #return false because common elements are present in both sets
-
+print(a.isdisjoint(b))

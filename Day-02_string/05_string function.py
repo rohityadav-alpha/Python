@@ -8,3 +8,5 @@ print(letter1.capitalize())
 #print(letter1.formate("holliday"))
 print(letter1.count("sir"))
 print(letter1.lower())
+letter="dear sir rohit thanks you"
+print(letter1.split())
