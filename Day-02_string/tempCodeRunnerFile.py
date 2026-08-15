@@ -1,8 +1,6 @@
-letter1="dear sir rohit thanks you"
-
-print(letter1[::])   #letter1[start:end:skip]
-print(letter1[0::])  
-print(letter1[0:10:2]) #it returns value skipping every 2nd alphabet from string 
-print(letter1[2::3])   #it returns value skipping every 2nd alphabet from string  
-print(letter1[0:23:1]) 
-print(letter1[5:18:2])  
+list1=['dear', 'sir,my', 'name', 'is', 'rohit', 'yadav', 'i', 'm', 'writing', 'this', 'regard', 'my', '5', 'days', 'hollidays', 'thanks', 'sir']
+print("".join(list1))
+tuple1=('dear', 'sir,my', 'name', 'is', 'rohit', 'yadav', 'i', 'm', 'writing', 'this', 'regard', 'my', '5', 'days', 'hollidays', 'thanks', 'sir')
+print("".join(tuple1))
+set1={'dear', 'sir,my', 'name', 'is', 'rohit', 'yadav', 'i', 'm', 'writing', 'this', 'regard', 'my', '5', 'days', 'hollidays', 'thanks', 'sir'}
+print("".join(set1))
