@@ -1,4 +1,3 @@
-#06_loops_practice\Loop_Theme1_Pattern_Printing_Questions\11-15_Que.py
 # 11. [Medium] Print an alternating 1 and 0 pyramid pattern.
 def patter_piramid(n):
    for i in range(n+1):
