@@ -18,3 +18,7 @@ print(list1[-5:-2]) #list1[ start_posuition : end_position ] from reverce count
 #list slicing with skip value
 print("list slicing with skip value")
 print(list1[0:5:]) 
+
+w="rohit"
+list1=list(w)
+print(list1)

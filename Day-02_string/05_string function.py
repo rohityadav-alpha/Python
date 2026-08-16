@@ -16,3 +16,11 @@ tuple1=('dear', 'sir,my', 'name', 'is', 'rohit', 'yadav', 'i', 'm', 'writing', '
 print("".join(tuple1))
 set1={'dear', 'sir,my', 'name', 'is', 'rohit', 'yadav', 'i', 'm', 'writing', 'this', 'regard', 'my', '5', 'days', 'hollidays', 'thanks', 'sir'}
 print("".join(set1))
+
+#chr(65) is equal to A character in python Capital Alphabets are start from chr(65)=="A" and small alphabets starts from chr(97)=="a"
+for i in range(26):
+    print(chr(97+i))
+# Using ord("") to find the value of the string character ord("A") return 65 and ord("a") return 97
+val=ord("A")
+vl=ord("a")
+print(val,vl)

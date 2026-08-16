@@ -1,10 +1,8 @@
-# 9. [Medium] Print a floyd's triangle (continuously increasing numbers row-wise).
-def floyds_triangle(n):
-   num=1
-   for i in range(1, n+1):
-      row = []
-      for j in range(i):
-         row.append(str(num))
-         num += 1
-         print(" ".join(row))
-floyds_triangle(5)
+def palindrom_ptr(n):
+   for i in range(1,n+1):
+      for j in range(1,i+1):
+         print(j,end="")
+      for k in range(i-1,0,-1):
+         print(k,end="")
+      print()
+palindrom_ptr(5)
