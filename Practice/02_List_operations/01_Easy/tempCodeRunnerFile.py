@@ -1,12 +1,10 @@
-li1=[4,9,'h',8,'r',3,'o',3,4,'r']
-li2=['o',9,3,7,'i',1,'i',9,'r','t','t']
-def removeDuplicate(l1,l2):
-    nlist=[]
-    for i in l1:
-        if i not in nlist:
-            nlist.append(i)
-    for j in l2:
-        if j not in nlist:
-            nlist.append(j)
-    return print(nlist)
-removeDuplicate(li1,li2)
+# 11. Find the Index of the First Occurrence of an Element
+list1=[5,7,2,4,1,3,6,9,8]
+list2=[1,'b',7,'c',5,4,'r',7,4,'c']
+# solution 1 -- for list with same type of data 
+def frst_oc(l,ta):
+    for i in range(len(list1)):
+        if l[i]==ta:
+            return (f"the element {ta} is present at {i} index in the given list")
+    return (f"the element {ta} is not present in the given list {l}")
+print(frst_oc(list1,4))
