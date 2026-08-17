@@ -39,3 +39,31 @@ for i in range(3):
     for j in range(i, 3):
         print(i, j)
 # output: 0,0/0,1/0,2/1,1/1,2/2,2
+
+
+
+#5. This loop is meant to find the first negative number in a list, but it has a flag-based logic bug. Identify and fix it.
+list1=[1,6,2,-8,5,-9,4,3,7]
+def find_first_negative(arr):
+    found = False
+    result = 0
+    for num in arr:
+        if num < 0:
+            found = True
+        if found:
+            result = num      
+    return result
+print(find_first_negative(list1))
+# solution:
+list1=[1,6,2,-8,5,-9,4,3,7]
+def find_first_negative(arr):
+    found = False
+    result = 0
+    for num in arr:
+        if num < 0:
+            found = True
+        if found:
+            result = num
+            break          #-- break keyword is the solution      
+    return result
+print(find_first_negative(list1))
