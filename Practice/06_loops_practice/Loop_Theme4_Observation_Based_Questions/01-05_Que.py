@@ -31,3 +31,11 @@ for i in range(len(arr) - 3, len(arr)): # this will be goes under negetive index
 arr = [10, 20]
 for i in range(max(0,len(arr) - 3),len(arr)): # to avoide the negetive indexing use max(0,len(arr)-3) it set max value upto zero it prevent the startig value becomes zero
     print(arr[i])
+
+
+
+#4. Trace through this nested loop and determine what it prints — the output depends on the outer loop's state affecting the inner loop's range.
+for i in range(3):
+    for j in range(i, 3):
+        print(i, j)
+# output: 0,0/0,1/0,2/1,1/1,2/2,2
