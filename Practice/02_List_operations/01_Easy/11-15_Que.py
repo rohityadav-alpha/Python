@@ -5,9 +5,9 @@ list2=[1,'b',7,'c',5,4,'r',7,4,'c']
 def frst_oc(l,ta):
     for i in range(len(list1)):
         if l[i]==ta:
-            return (f"the element {ta} is present at {i} index in the given list")
+            return (f"the element {ta} is present at index {i} in the given list")
     return (f"the element {ta} is not present in the given list {l}")
-print(frst_oc(list1,4))
+print(frst_oc(list1,89))
 # solution 2 -- for list with diff type of data 
 def first_Ocur(l,ta):
     for el in range(len(l)):
@@ -16,6 +16,17 @@ def first_Ocur(l,ta):
                 return (f"the element {ta} is present at {el} index in the given list")
         elif isinstance(l[el],int):
             if l[el]==ta:
-                return (f"the element {ta} is present at {el} index in the given list")
+                return (f"the element {ta} is present at index {el} in the given list")
     return (f"the element {ta} is not present in the given list {l}")
-print(first_Ocur(list2,'b'))   
+print(first_Ocur(list2,'b')) 
+# solution 3 -- without isinstance() method 
+def first_Ocur2(l,ta):
+    for el in range(len(l)):
+        if type(l[el])==str:
+            if l[el]==ta:
+                return (f"the element {ta} is present at index {el} in the given list")
+        elif type(l[el])==int:
+            if l[el]==ta:
+                return (f"the element {ta} is present at index {el} in the given list")
+    return (f"the element {ta} is not present in the given list {l}")
+print(first_Ocur2(list2,'z'))   
