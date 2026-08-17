@@ -1,10 +1,8 @@
-# 11. Sort the Characters of a String Alphabetically
-char=input("Enter the word: ")
-def sortString(w):
-    nstr=""
-    list1=list(w)
-    list1.sort()
-    for ch in list1:
-        nstr+=ch
-    return nstr
-print(sortString(char))
+char=input("Enter the char")
+try :
+    print(f" the string contain only digit{int(char)}")
+except ValueError:
+    print("the string contain letters of alphabets")
+
+n=char.isdigit()
+print(n)
