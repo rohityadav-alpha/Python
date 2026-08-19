@@ -13,3 +13,11 @@ def uniquevalue(d):
     s=set(d.values())
     return len(s)
 print(uniquevalue(dict4))
+
+# 13. Update dictionary values by adding a fixed number to each value.
+def addFixVal(d,v):
+    ndict={}
+    for key,val in d.items():
+        ndict[key]=v
+    return ndict
+print(addFixVal(dict4,75))
