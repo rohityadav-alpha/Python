@@ -45,6 +45,7 @@ print(addFixVal(dict2,75))
 
 # 14. Find the common keys between two dictionaries.
 dict3={'maths':88,'science':55,'english':66}
+# solution 1--without using set() function
 def common(d1,d2):
     nlist=[]
     for key1 in d1:
@@ -53,3 +54,13 @@ def common(d1,d2):
                 nlist.append(key1)
     return nlist
 print(common(dict2,dict3))
+# solution 2--using set functions
+def common1(d1,d2):
+    s=set(d1.keys())
+    s1=set(d2.keys())
+    return s.intersection(s1)
+print(common1(dict2,dict3))
+# solution3--using & operator
+def common2(d1,d2):
+    return d1.keys()&d2.keys()
+print(common2(dict2,dict3))
