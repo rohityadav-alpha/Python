@@ -39,3 +39,12 @@ print(set(sentence.split()))
 def countunique(s):
     return len(set(s.split()))
 print(countunique(sentence))
+
+
+
+# 14. Check if two sets are equal.
+s3={1,2,3,4,5}
+s4={5,4,3,2,1}
+def checkEqual(set1,set2):
+    return set1==set2
+print(checkEqual(s3,s4))
