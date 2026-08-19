@@ -48,3 +48,11 @@ s4={5,4,3,2,1}
 def checkEqual(set1,set2):
     return set1==set2
 print(checkEqual(s3,s4))
+
+
+
+# 15. Create a frozen set from a list and explain why it is useful.
+list1=[1,2,3,4,5]
+fs=frozenset(list1)
+print(fs)
+# A frozen set is an immutable version of a set. Once created, its elements cannot be changed, added, or removed. This makes it useful for creating a set that should not be modified after creation, ensuring data integrity.
