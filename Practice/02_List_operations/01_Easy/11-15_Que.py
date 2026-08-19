@@ -30,3 +30,14 @@ def first_Ocur2(l,ta):
                 return (f"the element {ta} is present at index {el} in the given list")
     return (f"the element {ta} is not present in the given list {l}")
 print(first_Ocur2(list2,'z'))   
+
+
+
+# 12. Rotate a List to the Left by K Positions
+def rotate_list(l,k):
+    k1=k%len(l)
+    rotate=l[k1:]+l[:k1]
+    return rotate
+print(rotate_list(list1,5))
+
+
