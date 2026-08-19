@@ -36,9 +36,3 @@ print(maxmin(s3))
 def MaxMin(s):
     return max(s),min(s)
 print(MaxMin(s3))
-
-# 11. Convert a string into a set of unique characters.
-s5="rohit roshan ravi"
-def convert(s):
-    return set(s)
-print(convert(s5))
