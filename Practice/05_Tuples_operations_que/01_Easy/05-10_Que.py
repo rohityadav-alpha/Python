@@ -46,8 +46,3 @@ print(len(varb))
 t=(1,) #this is a single tuple
 print(t)
 print(type(t))
-
-# 11. Repeat a tuple multiple times.
-def repete(t,n):
-    return t*n
-print(repete(t1,2))
