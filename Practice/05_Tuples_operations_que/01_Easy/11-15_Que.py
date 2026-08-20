@@ -5,6 +5,10 @@ def repete(t,n):
 print(repete(t1,2))
 
 # 12. Find the maximum and minimum element in a tuple.
+# solution 1 -- using max() and min() methods
+print(max(t1))
+print(min(t1))
+# solution 2 -- without using max() and min() methods
 def maxmin(t):
     largest=t1[0]
     smallest=t1[0]
@@ -15,3 +19,10 @@ def maxmin(t):
             smallest=i
     return largest,smallest
 print(maxmin(t1))
+
+
+
+# 13. Convert a tuple into a list.
+def con(t):
+    return list(t)
+print(con(t1))
