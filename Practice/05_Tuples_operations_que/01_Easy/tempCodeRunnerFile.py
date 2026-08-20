@@ -1,4 +1,5 @@
-# 10. Create a single-element tuple correctly.
-t=(1,) #this is a single tuple
-print(t)
-print(type(t))
+# 14. Swap two variables using tuple unpacking.
+def swap(a,b):
+    a,b=b,a
+    return a,b
+print(swap(4,7))
