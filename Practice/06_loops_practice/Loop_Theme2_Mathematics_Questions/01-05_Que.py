@@ -15,3 +15,16 @@ def Sum1(n):
         n=n//10
     return s
 print(Sum1(456))
+
+
+
+# 2. [Easy] Count the digits of a number without converting it to a string.
+num=int(input("enter thhe number :"))
+def Count(n):
+    n1=0
+    while n>0:
+        n=n//10
+        n1+=1
+    return n1
+print(Count(num))
+
