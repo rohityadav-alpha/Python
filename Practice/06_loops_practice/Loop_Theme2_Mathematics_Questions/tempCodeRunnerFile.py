@@ -1,14 +1,11 @@
-# 3. [Easy] Reverse a number using a loop and check if it's a palindrome by comparing with original.
-num=int(input("enter thhe number :"))
-def palindrom(n):
-    temp=n
-    rev=0
-    while n>0:
-        digit=n%10
-        rev=rev*10+digit
-        n=n//10
-    if temp==rev:
-        return (f"the number is palindrom")
-    else:
-        return (f"the number is not palindrom")
-print(palindrom(num))
+# 5. [Easy] Check whether a number is prime using a loop.
+def prime(n):
+    if n>2:
+        for i in range(2,n):
+            if n%i==0:
+                return False
+    return True
+if prime(9):
+    print("the number is prime number")
+else:
+     print("the number is not prime number")
