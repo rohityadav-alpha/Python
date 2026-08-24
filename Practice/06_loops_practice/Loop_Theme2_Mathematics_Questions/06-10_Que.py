@@ -26,4 +26,14 @@ def LCM(a,b):
             gcd=i
     return (a*b)/gcd
 print(LCM(4,6))
-
+# solution 2
+def lcm_bruteforce(a, b):
+    if a == 0 or b == 0:
+        return 0
+    larger = max(a, b)
+    candidate = larger
+    while True:
+        if candidate % a == 0 and candidate % b == 0:
+            return candidate
+        candidate += larger
+print(lcm_bruteforce(4, 6)) # 12
