@@ -7,7 +7,13 @@ def GCD(a,b):
             gcd=i
     return gcd
 print(GCD(15,12))
-
+# solution 2
+def gcd(a, b):
+    a, b = abs(a), abs(b)
+    while b:
+        a, b = b, a % b
+    return a
+print(gcd(15, 12)) # 6
 
 
 
