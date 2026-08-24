@@ -1,11 +1,20 @@
-# 5. [Easy] Check whether a number is prime using a loop.
-def prime(n):
-    if n>2:
-        for i in range(2,n):
-            if n%i==0:
-                return False
-    return True
-if prime(9):
-    print("the number is prime number")
-else:
-     print("the number is not prime number")
+# 7. [Medium] Find the LCM of two numbers using a loop-based brute-force approach.
+# solution 1
+def LCM(a,b):
+    gcd=0
+    for i in range(1,min(a,b)+1):
+        if a%i==0 and b%i==0:
+            gcd=i
+    return (a*b)/gcd
+print(LCM(4,6))
+# solution 2
+def lcm_bruteforce(a, b):
+    if a == 0 or b == 0:
+        return 0
+    larger = max(a, b)
+    candidate = larger
+    while True:
+        if candidate % a == 0 and candidate % b == 0:
+            return candidate
+        candidate += larger
+print(lcm_bruteforce(4, 6)) # 12
