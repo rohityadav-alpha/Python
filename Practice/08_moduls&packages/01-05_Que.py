@@ -43,3 +43,8 @@ if os.path.exists(os.path.join(path,"experiment.py")):
     os.remove(os.path.join(path,"experiment.py"))
 else:
     pass 
+# delete directpry
+if os.path.exists(path):
+    os.rmdir(path)
+else:
+    pass
