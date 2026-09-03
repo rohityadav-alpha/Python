@@ -33,18 +33,21 @@ for item in Listofdir:
 
 # [MEDIUM] Question 1.4: How do you safely rename a file with `os.rename()` and delete files vs empty folders using `os.remove()` and `os.rmdir()`?
 fullpath="D:\\LEARN_PYTHON\\Practice\\08_moduls&packages"
+folder1=os.path.join(fullpath,"welcom")
 # rename file
 if os.path.exists(os.path.join(fullpath,"xyz.txt")):
     os.rename(os.path.join(fullpath,"xyz.txt"),os.path.join(fullpath,"rohit.txt"))
 else:
     pass
 # delete file 
-if os.path.exists(os.path.join(path,"experiment.py")):
-    os.remove(os.path.join(path,"experiment.py"))
+if os.path.exists(os.path.join(fullpath,"experiment.py")):
+    os.remove(os.path.join(fullpath,"experiment.py"))
 else:
     pass 
 # delete directpry
-if os.path.exists(path):
-    os.rmdir(path)
+f=os.listdir(folder1)
+if len(f)==0:
+    os.rmdir(folder1)
 else:
-    pass
+    for i in f:
+        os.remove(os.path.join(folder1,i))
