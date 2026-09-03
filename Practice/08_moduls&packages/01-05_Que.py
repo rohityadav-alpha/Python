@@ -38,3 +38,8 @@ if os.path.exists(os.path.join(fullpath,"xyz.txt")):
     os.rename(os.path.join(fullpath,"xyz.txt"),os.path.join(fullpath,"rohit.txt"))
 else:
     pass
+# delete file 
+if os.path.exists(os.path.join(path,"experiment.py")):
+    os.remove(os.path.join(path,"experiment.py"))
+else:
+    pass 
