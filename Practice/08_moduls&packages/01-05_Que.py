@@ -24,6 +24,17 @@ print(Listofdir)
 for item in Listofdir:
     full_path=os.path.join(path,item)
     if os.path.isdir(full_path):
-        print(f'{item} is a folder, size: {os.path.getsize(full_path)} bytse')
+        print(f'{item} is a folder, size: {os.path.getsize(full_path)} bytes')
     else:
-        print(f'{item} is a file , size: {os.path.getsize(full_path)} bytse')
+        print(f'{item} is a file, size: {os.path.getsize(full_path)} bytes')
+
+
+
+
+# [MEDIUM] Question 1.4: How do you safely rename a file with `os.rename()` and delete files vs empty folders using `os.remove()` and `os.rmdir()`?
+fullpath="D:\\LEARN_PYTHON\\Practice\\08_moduls&packages"
+# rename file
+if os.path.exists(os.path.join(fullpath,"xyz.txt")):
+    os.rename(os.path.join(fullpath,"xyz.txt"),os.path.join(fullpath,"rohit.txt"))
+else:
+    pass
