@@ -8,3 +8,8 @@ else:
     print("file is not exists")
 
 
+#2. print absolute path of the file
+print(os.path.abspath("GreetModule.py"))
+print(os.path.abspath(__file__)) # current file path
+
+
