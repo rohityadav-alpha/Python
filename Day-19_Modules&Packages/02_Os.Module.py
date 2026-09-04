@@ -13,3 +13,8 @@ print(os.path.abspath("GreetModule.py"))
 print(os.path.abspath(__file__)) # current file path
 
 
+#3. join the directory and file name
+File="read.txt"
+basepath=os.path.abspath(__file__)
+fullpath=os.path.join(basepath,File)
+print(fullpath)
