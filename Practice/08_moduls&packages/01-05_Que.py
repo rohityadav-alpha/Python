@@ -1,7 +1,8 @@
 # Module 1: File System & Path Operations (`os`, `sys`, `os.path`)
 
 # [EASY] Question 1.1: How do you check if a file or folder exists on disk and obtain its absolute path using `os.path`?
-import os 
+import os
+import sys 
 newfile=os.path.exists('README.md')
 print(newfile)
 path=os.path.abspath('README.md')
@@ -51,3 +52,22 @@ if len(f)==0:
 else:
     for i in f:
         os.remove(os.path.join(folder1,i))
+
+
+
+# [HARD] Question 1.5: How does PROUSB's `get_resource_path()` function seamlessly switch between normal Python execution and PyInstaller's extracted bundle directory (`sys._MEIPASS`)?
+
+import os # [inbuilt module]
+import sys # [inbuilt module] Python runtime state access ke liye
+
+def get_resource_path(relative_path): # [def keyword] Final PROUSB logic
+# [hasattr inbuilt function] Check karta hai ki '_MEIPASS' attribute sys me hai ya nahi
+    if hasattr(sys, '_MEIPASS'):
+# PyInstaller .exe execution mode:
+        return os.path.join(sys._MEIPASS, relative_path)
+# Normal development execution mode:
+    return os.path.join(os.path.abspath(""), relative_path)
+
+# Test execution:
+print("Templates Dir:", get_resource_path("templates"))
+print("App Icon File:", get_resource_path("app.ico"))     

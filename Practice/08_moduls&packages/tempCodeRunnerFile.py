@@ -1,6 +1,14 @@
-# [EASY] Question 1.1: How do you check if a file or folder exists on disk and obtain its absolute path using `os.path`?
-import os 
-newfile=os.path.exists('Practice/08_moduls&packages/01-05_Que.py')
-print(newfile)
-path=os.path.abspath('README.md')
-print(path)
+import os # [inbuilt module]
+import sys # [inbuilt module] Python runtime state access ke liye
+
+def get_resource_path(relative_path): # [def keyword] Final PROUSB logic
+# [hasattr inbuilt function] Check karta hai ki '_MEIPASS' attribute sys me hai ya nahi
+    if hasattr(sys, '_MEIPASS'):
+# PyInstaller .exe execution mode:
+        return os.path.join(sys._MEIPASS, relative_path)
+# Normal development execution mode:
+    return os.path.join(os.path.abspath(""), relative_path)
+
+# Test execution:
+print("Templates Dir:", get_resource_path("templates"))
+print("App Icon File:", get_resource_path("app.ico"))     
