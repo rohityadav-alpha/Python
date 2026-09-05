@@ -18,3 +18,15 @@ File="read.txt"
 basepath=os.path.abspath(__file__)
 fullpath=os.path.join(basepath,File)
 print(fullpath)
+
+
+#4. check if it is a file or folder
+path="D:\PythonProjects"
+flist=os.listdir(path)
+def check(p,l):
+    for i in l:
+        if os.path.isdir(os.path.join(p,i)):
+            print(f"{i} :is is a folder")
+        else:
+            print(f"{i} :it is a file")
+check(path,flist)
