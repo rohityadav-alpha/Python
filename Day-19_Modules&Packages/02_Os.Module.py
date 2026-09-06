@@ -30,3 +30,15 @@ def check(p,l):
         else:
             print(f"{i} :it is a file")
 check(path,flist)
+
+
+# 5. print files/folders present in a directory with there size
+def FwithSize(p):
+    plist=os.listdir(p)
+    for i in plist:
+        fullpath=os.path.join(p,i)
+        if os.path.isdir(fullpath):
+            print(f"{i} this is a folder")
+        else:
+            print(f"{i} this is a file , size: {os.path.getsize(fullpath)} ")   
+FwithSize(path)
