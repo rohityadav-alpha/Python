@@ -15,7 +15,7 @@ def frequ(s):
     ndict = {}
     for char in text:
         ndict[char] = ndict.get(char, 0) + 1
-    return freq
+    return ndict
 print(frequ(text))
 
 
@@ -26,5 +26,17 @@ def firstnonrep(d):
         if val==1:
             temp[key]=val
             break
-    return (f"the first pair of non repetive character is {temp}")
+    return (f"the first non repetive character is {temp}")
 print(firstnonrep(freq("rrooohhitt"))) #freq() function is returns the frequency of each character from the string this is a question no.1
+
+
+# 3. Find the First Repeating Character in a String
+def firstrep(d):
+    s={}
+    for key,val in d.items():
+        if val>1:
+            s[key]=val
+            break
+    return (f"the first repeting charecter is {s}")
+print(firstrep(freq("rohihit")))
+
