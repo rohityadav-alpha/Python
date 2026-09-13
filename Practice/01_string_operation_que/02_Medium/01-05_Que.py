@@ -19,6 +19,7 @@ def frequ(s):
 print(frequ(text))
 
 
+
 # 2. Find the First Non-Repeating Character in a String
 def firstnonrep(d):
     temp={}
@@ -30,6 +31,7 @@ def firstnonrep(d):
 print(firstnonrep(freq("rrooohhitt"))) #freq() function is returns the frequency of each character from the string this is a question no.1
 
 
+
 # 3. Find the First Repeating Character in a String
 def firstrep(d):
     s={}
@@ -39,4 +41,18 @@ def firstrep(d):
             break
     return (f"the first repeting charecter is {s}")
 print(firstrep(freq("rohihit")))
+
+
+       
+# 4. Remove Duplicate Characters While Preserving Order
+def removedup(s):
+    word=""
+    for ch in s:
+        if ch not in word:
+            word+=ch
+        else:
+            continue
+    return word
+print(removedup("roohitt"))
+
 
