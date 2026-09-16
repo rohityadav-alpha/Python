@@ -1,0 +1,1 @@
+# [EASY] Question 2.1: How do you format a floating-point number to exactly 2 decimal places using Python f-strings?

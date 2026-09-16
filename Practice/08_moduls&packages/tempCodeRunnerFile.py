@@ -11,4 +11,4 @@ def get_resource_path(relative_path): # [def keyword] Final PROUSB logic
 
 # Test execution:
 print("Templates Dir:", get_resource_path("templates"))
-print("App Icon File:", get_resource_path("app.ico"))     
+print("App Icon File:", get_resource_path("app.ico"))  
