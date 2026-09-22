@@ -29,3 +29,17 @@ def mostFreq(sentences):
     return result
 print(mostFreq("Count the Frequency of Each Word in Count the Frequency Word in Sentence Word"))
     
+
+# 8. Compress a String Using Character Counts
+# solution 1 -- count characters from anywhere this is not the solution 
+def compress(s):
+    s2=""
+    for ch in s:
+        count=0
+        for ch1 in s:
+            if ch==ch1:
+                count+=1
+        if ch not in s2:
+            s2=s2+ch+str(count)
+    return s2
+print(compress("rohito"))

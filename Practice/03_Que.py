@@ -74,3 +74,15 @@ def fizzBuzz(num):
             newlist.append(i)
     return newlist
 print(fizzBuzz(15))
+
+
+# remove adjecent character from string
+def removeAdj(s):
+    s1=list(s)
+    s2=""
+    for i in range(len(s1)):
+        if s1[i] not in s2:
+            s2+=s1[i]
+    return s2
+print(removeAdj("aaabccd")) #it work on this case  because this just avoid duplication
+print(removeAdj("aaabccd")) #but wont work in this case 

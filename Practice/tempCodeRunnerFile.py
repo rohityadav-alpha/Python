@@ -1,12 +1,9 @@
-# solution 1 with % operator
-def fizzbuzz(num):
-    for i in range(1,num+1):
-        if i%3==0 and i%5==0:
-            print("FizzBuzz")
-        elif i%3==0 and i%5!=0:
-            print("Fizz")
-        elif i%3!=0 and i%5==0:
-            print("Buzz")
-        else:
-            print(i)
-fizzbuzz(15)
+# remove adjecent character from string
+def removeAdj(s):
+    s1=list(s)
+    s2=""
+    for i in range(len(s1)):
+        if s1[i] not in s2:
+            s2+=s1[i]
+    return s2
+print(removeAdj("aaabccdc"))
