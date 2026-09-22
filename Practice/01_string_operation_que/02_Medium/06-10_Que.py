@@ -74,3 +74,13 @@ def deCompress(s):
         result+=char[i]*int(digit[i])
     return result
 print(deCompress("r2o1h3i1"))
+# solution 2
+def DeCompress(s):
+    result=""
+    for i in range(1,len(s)):
+        if s[i].isdigit() and int(s[i])>0:
+            result+=s[i-1]*int(s[i])
+    if  type(s[-1])==str:
+        result+=s[-1]
+    return result
+print(DeCompress("R5O1H2I"))
