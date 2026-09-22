@@ -1,18 +1,18 @@
-# 5. Check Whether Two Strings Are Anagrams
-def anagrams(s1,s2):
-    def fre(s):
-        ndict={}
-        for ch1 in s:
-            count=0
-            for ch2 in s:
-                if ch1==ch2:
-                    count+=1
-            ndict[ch1]=count
-        return ndict
-    if len(s1)==len(s2) and fre(s1)==fre(s2) and set(s1)==set(s2):
-        return (f"the shtrings {s1} and {s2} are anagrams")
-    else:
-        return (f"the shtrings {s1} and {s2} are not anagrams")
-print(anagrams("listen","silent"))
-print(anagrams("hello","world"))
-print(anagrams("rohit","ohtri"))
+# 7. Find the Most Frequent Character in a String
+def mostFreq(sentences):
+    ndict={}
+    sen=sentences.split()
+    for word in sen:
+        count=0
+        for word1 in sen:
+            if word==word1:
+                count+=1
+        ndict[word]=count
+    result={}
+    large=max(ndict.values())
+    for key,val in ndict.items:
+        if large==val:
+            result[key]=val
+    return result
+print(mostFreq("Count the Frequency of Each Word in Count the Frequency Word in Sentence"))
+ 
