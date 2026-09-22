@@ -43,7 +43,7 @@ def compress(s):
             s2=s2+ch+str(count)
     return s2
 print(compress("rohito"))
-#solution2
+#solution2 - this is the solution
 def Compress(s):
     s1=list(s)
     s2=""
@@ -57,3 +57,20 @@ def Compress(s):
     s2+=s1[-1]+str(count)   # for last value concatinate
     return s2
 print(Compress("RRohhRit"))
+
+
+# 9. Decompress a Run-Length Encoded String
+# solution 1
+def deCompress(s):
+    digit=[]
+    char=[]
+    result=""
+    for ch in s:
+        if ch.isdigit():
+            digit.append(ch)
+        else:
+            char.append(ch)
+    for i in range(len(digit)):
+        result+=char[i]*int(digit[i])
+    return result
+print(deCompress("r2o1h3i1"))
