@@ -1,7 +1,7 @@
-list1=[5,7,2,4,1,3,6,9,8,4]
-# 12. Rotate a List to the Left by K Positions
-def rotate_list(l,k):
-    k1=k%len(l)
-    rotate=l[k1:]+l[:k1]
-    return rotate
-print(rotate_list(list1,5))
+# 13. Flatten a Nested List (One Level Deep)
+nested = [[1, 2], [3, 4], [5, 6]]
+flat=[]
+for n in nested:
+    for e in n:
+        flat.append(e)
+print(flat)
