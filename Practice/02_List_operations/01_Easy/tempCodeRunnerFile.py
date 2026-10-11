@@ -1,6 +1,11 @@
-# 15. Swap the First and Last Element of a List
-numbers = [1, 2, 3, 4, 5, 6]
-def swap(l):
-    l[0],l[-1]=l[-1],l[0]
-    return l
-print(swap(numbers))
+# 16. Find All Positive and Negative Numbers in a List
+numbers = [3, -1, 4, -5, 0, 2]
+P=[]
+N=[]
+for n in numbers:
+    if n>=0:
+        P.append(n)
+    elif n<0:
+        N.append(n)
+print(P)
+print(N)
