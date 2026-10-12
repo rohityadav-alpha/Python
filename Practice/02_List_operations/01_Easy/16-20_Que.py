@@ -45,7 +45,7 @@ target = 2
 result = []
 
 for num in numbers:
-    if num != target:
+    if num!=target:
         result.append(num)
-
+        
 print(result) # [1, 3, 4, 5]
