@@ -21,6 +21,10 @@ print(Avg(numbers))
 
 
 
+# 18. Find the Union of Two Lists
+union_list = list(set(list1) | set(list2))
+print(union_list) # [1, 2, 3, 4, 5]
+
 # 19. Find the intersection of Two Lists
 list1 = [1, 2, 3]
 list2 = [3, 4, 5]
