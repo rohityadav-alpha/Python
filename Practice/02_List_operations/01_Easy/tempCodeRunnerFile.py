@@ -1,6 +1,9 @@
-# 17. Find the Average of Elements in a List
-numbers = [10, 20, 30, 40]
-def Avg(l):
-    a=sum(l)/len(l)
-    return a
-print(Avg(numbers))
+# 18. Find the intersection of Two Lists
+list1 = [1, 2, 3]
+list2 = [3, 4, 5]
+inter=[]
+for n1 in list1:
+    for n2 in list2:
+        if n1==n2:
+            inter.append(n1)
+print(inter)    
