@@ -20,9 +20,20 @@ print(second)
 
 
 # 2. Find the missing number in a list of 1 to N.
-listn=[n for n in range(1,11) if n!=4 ]
-last=listn[-1]
+list2=[n for n in range(1,11) if n!=4 ]
+last=list2[-1]
 total=last*(last+1)/2
-SUM=sum(listn)
+SUM=sum(list2)
 result=total-SUM
 print(result) #4
+
+
+
+
+# 3. Split a list into chunks of size K.
+# soltion 1--list comprension
+list3=[n for n in range(1,101)]
+def chunks(l,k):
+    nlist=[l[i:i+k] for i in range(0, len(l), k)]
+    return nlist
+print(chunks(list3,50))
