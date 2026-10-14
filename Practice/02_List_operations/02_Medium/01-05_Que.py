@@ -52,7 +52,6 @@ print(chunksize(list3,20))
 list4=[2,4,7,9,8,1,2,3,6,7,8,9,5,4,8]
 duplidict={}
 singledict={}
-
 for i in list4:
     count=0
     for n in list4:
@@ -64,3 +63,13 @@ for i in list4:
         singledict[i]=count
 print(duplidict)
 print(singledict)
+
+
+
+
+# 5. Rotate a list to the right by K positions in-place.
+list5=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+def rotate(l,k):
+    nlist=l[k:]+l[0:k]
+    return nlist
+print(rotate(list5,10))
