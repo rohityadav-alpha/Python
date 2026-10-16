@@ -7,3 +7,5 @@ if ct<1 and ct==0:
     print("dictionary is empty")
 else:
     print("dictionary is not empty")
+# solution 2
+print(not dict2)
