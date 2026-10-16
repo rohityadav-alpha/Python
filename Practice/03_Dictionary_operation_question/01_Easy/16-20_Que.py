@@ -28,3 +28,12 @@ for k,v in dict3.items():
     if v>maxval:
         maxval=v
 print(maxval)
+
+
+
+# 19. Group a list of words by their first letter using a dictionary.
+list1=['apple','ant','banana','bee']
+dict4={}
+for word in list1:
+    dict4[word[0]]=[w for w in list1 if w[0]==word[0]]
+print(dict4)
