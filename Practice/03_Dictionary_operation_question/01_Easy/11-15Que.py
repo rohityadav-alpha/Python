@@ -64,3 +64,13 @@ print(common1(dict2,dict3))
 def common2(d1,d2):
     return d1.keys()&d2.keys()
 print(common2(dict2,dict3))
+
+
+
+
+# 15. Convert a dictionary into a list of tuples (key, value pairs).
+ndict={'a':1,'b':2};
+nlist=[]
+for key,val in ndict.items():
+    nlist.append((key,val))
+print(nlist)
