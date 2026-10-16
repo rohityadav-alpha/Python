@@ -37,3 +37,14 @@ dict4={}
 for word in list1:
     dict4[word[0]]=[w for w in list1 if w[0]==word[0]]
 print(dict4)
+
+
+
+# 20. Find the total count of a specific value's occurrences across all keys in a dictionary.
+dict5={'a':5,'b':5,'c':3}
+target=5
+count=0
+for v in dict5.values():
+    if v==target:
+        count+=1
+print(count)
